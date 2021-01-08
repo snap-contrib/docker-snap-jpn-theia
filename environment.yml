@@ -1,0 +1,7 @@
+name: env_s3
+channels:
+  - defaults
+  - terradue
+  - conda-forge
+dependencies:
+  - ipykernel

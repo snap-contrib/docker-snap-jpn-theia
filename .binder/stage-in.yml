@@ -1,0 +1,10 @@
+catalog:
+    id: catid
+    title: cat title
+    description: this is the cat description
+    collections:
+        - input_reference:
+            title: Sentinel-3 SLSTR Level 1 (SL_1_RBT)
+            description: Sentinel-3 SLSTR Level 1 (SL_1_RBT) catalogue reference
+            entries:
+                - https://catalog.terradue.com/sentinel3/search?uid=S3A_SL_1_RBT____20200619T232349_20200619T232649_20200621T042832_0179_059_301_1800_LN2_O_NT_004

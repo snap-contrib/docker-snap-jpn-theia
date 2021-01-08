@@ -1,0 +1,4 @@
+#jovyan ALL=(ALL) NOPASSWD:/usr/sbin/service docker *,/bin/chmod 777 /var/run/docker.sock
+#jovyan ALL=(ALL) NOPASSWD:ALL
+Cmnd_Alias JOVYAN = /bin/chown -R jenkins\:jenkins .jenkins/, /usr/bin/apt*, /usr/sbin/service docker *, /bin/chmod 777 /var/run/docker.sock, /etc/init.d/jenkins *, /usr/bin/java *, /usr/bin/minio *,  /usr/bin/chown -R jenkins\:jenkins /workspace/.jenkins/ 
+jovyan ALL=NOPASSWD: JOVYAN
