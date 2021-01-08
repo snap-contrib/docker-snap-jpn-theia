@@ -127,7 +127,11 @@ RUN . "$NVM_DIR/nvm.sh" &&                                              \
 USER ${NB_USER}
 
 COPY --chown=1002:1002 environment.yml /tmp/environment.yml          
-    
-RUN mamba env create -f /tmp/environment.yml &&                         \
+
+RUN mamba env create -p /srv/conda/envs/notebook -f /tmp/environment.yml &&                         \
     rm -fr /tmp/environment.yml
+
+
+
+
 
