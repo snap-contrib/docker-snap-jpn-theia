@@ -124,14 +124,12 @@ RUN . "$NVM_DIR/nvm.sh" &&                                              \
     yarn cache clean &&                                                 \
     echo "cd /workspace" >> /home/jovyan/.bashrc
 
+ADD .docker/start /usr/bin/start
+
 USER ${NB_USER}
 
 COPY --chown=1002:1002 environment.yml /tmp/environment.yml          
 
 RUN mamba env create -p /srv/conda/envs/notebook -f /tmp/environment.yml &&                         \
-    rm -fr /tmp/environment.yml
-
-
-
-
+    rm -fr /tmp/environment.yml && mamba clean -a -y 
 

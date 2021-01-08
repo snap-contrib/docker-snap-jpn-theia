@@ -5,6 +5,9 @@ services:
     build:
       context: .
       dockerfile: .docker/Dockerfile
+    #volumes:
+    #- eo-data:/workspace/data
     ports:
     - "80:8888"
-    entrypoint: sh -c 'jupyter lab --ip=0.0.0.0 --port=8888 --no-browser --notebook-dir /home/jovyan --allow-root --NotebookApp.token=""'
+    - "8080:8889"
+    entrypoint: sh -c 'start /srv/conda/bin/jupyter lab --ip=0.0.0.0 --port=8888 --no-browser --notebook-dir /home/jovyan --allow-root --NotebookApp.token=""'
