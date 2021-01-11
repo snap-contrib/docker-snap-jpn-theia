@@ -20,7 +20,7 @@ Use `docker compose` to use the built docker image:
 docker compose up
 ```
 
-The open your browser at the localhost, with e.g. 0.0.0.0 or localhost or 127.0.0.1.
+The open your browser at the localhost, with e.g. `0.0.0.0` or `localhost` or `127.0.0.1`.
 
 
 
