@@ -22,5 +22,5 @@ docker compose up
 
 The open your browser at the localhost, with e.g. `0.0.0.0` or `localhost` or `127.0.0.1`.
 
-
+When creating new notebooks, use the kernel `Python [conda:env notebook]`
 
