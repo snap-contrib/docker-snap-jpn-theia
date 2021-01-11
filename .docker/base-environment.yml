@@ -5,6 +5,7 @@ dependencies:
   - nb_conda
   - conda-build
   - mamba
-  - jupyter-server-proxy
+  - pip:
+    - jupyter-server-proxy
   - cookiecutter
   - nodejs

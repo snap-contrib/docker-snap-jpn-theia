@@ -99,6 +99,8 @@ ENV PATH=/srv/conda/envs/notebook/bin/:$PATH
 # jupyter config
 ADD .docker/jupyter_notebook_config.py /etc/jupyter/jupyter_notebook_config.py
 
+RUN /srv/conda/bin/jupyter labextension install @jupyterlab/server-proxy
+
 USER ${NB_USER}
 
 WORKDIR /workspace
@@ -125,6 +127,8 @@ RUN . "$NVM_DIR/nvm.sh" &&                                              \
     echo "cd /workspace" >> /home/jovyan/.bashrc
 
 ADD .docker/start /usr/bin/start
+
+ADD .docker/package.json /workspace 
 
 USER ${NB_USER}
 

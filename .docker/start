@@ -3,8 +3,22 @@
 # theia
 . "$NVM_DIR/nvm.sh"	
 
-cd /srv/theia	
+if [[ ! -L /workspace/package.json  ]]; then
+  ln -s /srv/theia/package.json /workspace/package.json
+fi
 
-yarn start /workspace --hostname 0.0.0.0 --port 8889 & 	
+if [[ ! -L /srv/theia/src-gen ]]; then
+  ln -s /srv/theia/src-gen /workspace/src-gen
+fi
+
+if [[ ! -d /workspace/.theia ]]; then
+  mkdir /workspace/.theia
+fi
+
+if [[ ! -L /home/jovyan/.theia  ]]; then
+  ln -s /workspace/.theia  /home/jovyan/.theia
+fi
+
+export PATH=/srv/theia/node_modules/@theia/cli/bin:${PATH}
 
 exec "$@" 

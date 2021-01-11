@@ -4,5 +4,5 @@ channels:
   - conda-forge
 dependencies:
   - xeus-python
-  - snap=8.0.0
-  - snapista
+ # - snap=8.0.0
+ # - snapista
