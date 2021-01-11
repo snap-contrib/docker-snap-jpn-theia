@@ -21,4 +21,7 @@ fi
 
 export PATH=/srv/theia/node_modules/@theia/cli/bin:${PATH}
 
+# snap 
+export PATH=/srv/conda/envs/notebook/snap/bin:${PATH}
+
 exec "$@" 
